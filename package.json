@@ -1,0 +1,49 @@
+{
+  "name": "ceb",
+  "version": "1.1.0",
+  "description": "Description",
+  "author": "Kukzik",
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "set NODE_ENV=development&& gulp jade && gulp stylus && gulp w",
+    "build": "set NODE_ENV=production&& gulp build"
+  },
+  "browserslist": [
+    "last 50 versions",
+    "> 1%",
+    "ie >= 10",
+    "maintained node versions",
+    "not dead"
+  ],
+  "devDependencies": {
+    "browser-sync": "^2.26.3",
+    "es6-promise": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-browserify": "*",
+    "gulp-cache": "*",
+    "gulp-clean": "^0.3.2",
+    "gulp-clean-css": "*",
+    "gulp-concat": "*",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-csslint": "*",
+    "gulp-imagemin": "*",
+    "gulp-jade": "*",
+    "gulp-merge-media-queries": "*",
+    "gulp-notify": "*",
+    "gulp-plumber": "*",
+    "gulp-rename": "*",
+    "gulp-rigger": "*",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-stylus": "*",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-uglify": "*",
+    "imagemin-pngquant": "^4.2.0"
+  },
+  "dependencies": {
+    "bower": "^1.8.8",
+    "gulp": "^3.9.1",
+    "gulp-if": "^2.0.2",
+    "run-sequence": "^2.2.1"
+  }
+}

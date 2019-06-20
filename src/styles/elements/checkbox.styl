@@ -1,0 +1,44 @@
+.checkbox
+	display inline-block
+	vertical-align middle
+
+	&__label
+		display inline-block
+		padding-left 30px
+		position relative
+		user-select none
+		cursor pointer
+
+	&__input
+		display none
+		&:checked
+			& + .checkbox
+				&__icon
+					.icon_checked
+						display inline-block
+					.icon_unchecked
+						display none
+		&[disabled]
+			& + .checkbox
+				&__icon
+					opacity .4
+					& + .checkbox
+						&__text
+							opacity .4
+
+	&__icon
+		position absolute
+		left 0
+		top 2px
+		width 20px
+		height 20px
+
+		.icon_checked
+			display none
+		.icon_unchecked
+			display inline-block
+
+	&__text
+		font-size 13px
+		color #343e5c
+		line-height 1.802

@@ -1,0 +1,7 @@
+mixin select(data)
+	.select.js-select&attributes(attributes)
+		input(type="text" value="0" name=data.name).select__data.js-select__data
+		.select__trigger.js-select__trigger!=data.items[0]
+		.select__dropdown.js-select__list
+			each item, index in data.items
+				.select__dropdown-item.js-select__list-item!=item

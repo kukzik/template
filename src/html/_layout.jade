@@ -1,0 +1,27 @@
+block variables
+
+doctype html
+html(lang="ru")
+	head
+		meta(charset="UTF-8")
+		if ( title != undefined )
+			title Termopuls - #{title}
+		else
+			title Termopuls
+		meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1")
+		link(rel="stylesheet" type="text/css" href="/css/main.css")
+
+		block additional-scripts
+	body
+		.page-wrapper
+			.icons
+				include sprite.svg
+			include _mixins.jade
+			include blocks/header
+
+			section.content
+				block content
+
+			include blocks/footer
+		include blocks/modal_auth
+		script(src="js/main.js")

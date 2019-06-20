@@ -1,0 +1,28 @@
+doctype html
+html(lang="en")
+	head
+		meta(charset="UTF-8")
+		title Termopuls
+		meta(name="viewport" content="width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=no")
+		link(rel="stylesheet" type="text/css" href="/css/main.css")
+	body
+		.icons
+			include sprite.svg
+		include _mixins.jade
+		div(style="text-align: center; height: 80px; margin: 20px 0 30px;")
+			+icon('logo')
+		ol
+			li
+				a(href="/main.html") Главная страница.
+			li
+				a(href="/horeca.html") Horeca.
+			li
+				a(href="/goods-card.html") Картчока товара.
+			li
+				a(href="/catalog.html") Коталог.
+			li
+				a(href="/contacts.html") Контакты.
+			li
+				a(href="/about-us.html") О компании.
+
+		script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js")
