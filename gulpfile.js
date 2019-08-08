@@ -42,10 +42,7 @@ gulp.task('stylus',function(){
 		.pipe(csslint.formatter("compact"))
 		.pipe(concatCss('main.css', {rebaseUrls: false}))
 		.pipe(gulp.dest('htdocs/css'))
-		.pipe(cleanCss())
-		.pipe(rename({ suffix: '.min' }))
-		.pipe(gulp.dest('htdocs/css'))
-		.pipe(browserSync.reload())
+		.pipe(reload({stream:true}))
 		.pipe(notify({
 			title: 'Сообщение Gulp',
 			message: 'stylus task завершен',
@@ -67,7 +64,7 @@ gulp.task('js',function(){
 			.pipe(uglify())
 			.pipe(rename({ suffix: '.min' }))
 			.pipe(gulp.dest('htdocs/js'))
-			.pipe(browserSync.reload({stream:true}))
+			.pipe(reload({stream:true}))
 			.pipe(notify({
 				title: 'Сообщение Gulp',
 				message: 'js task завершен',
