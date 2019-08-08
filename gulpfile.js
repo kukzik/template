@@ -45,7 +45,7 @@ gulp.task('stylus',function(){
 		.pipe(cleanCss())
 		.pipe(rename({ suffix: '.min' }))
 		.pipe(gulp.dest('htdocs/css'))
-		.pipe(reload({stream:true}))
+		.pipe(browserSync.reload())
 		.pipe(notify({
 			title: 'Сообщение Gulp',
 			message: 'stylus task завершен',
